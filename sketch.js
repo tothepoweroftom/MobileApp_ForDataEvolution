@@ -130,26 +130,9 @@ slider.find(".rs-handle").hide();
     sb.addPublish("centralButton", "boolean", "false" );
     sb.addPublish("slider1Active", "boolean", "false" );
     sb.addPublish("slider2Active", "boolean", "false" );
-
     sb.addPublish("linearSlider", "range", "0" );
     sb.addPublish("filter", "string");
 
-
-    sb.addSubscribe("backgroundColor", "range" );
-
-    // listen to events
-    // note: different than above, we can just write the
-    // function here!
-    sb.onRangeMessage = function( name, value ){
-        // change the bg color based on the range!
-        document.body.style.backgroundColor = "rgb(" + value +"," + value +"," + value + ")"
-    }
-
-    // send range based on mouse X
-
-    document.body.onmousemove = function( e ){
-
-    }
 
     // connect
     sb.connect();
@@ -228,6 +211,7 @@ function slider1Stop(){
 
 
 }
+
 function onValueChange2(e){
 
 
